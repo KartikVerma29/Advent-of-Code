@@ -68,6 +68,17 @@ int main(){
         ans+=iter;
     }
     
+    vector<string> result;
+    for(auto D1:input2D){
+        string temp="";
+        for(auto D2:D1){
+            temp+=D2;
+        }
+        result.push_back(temp);
+    }
+
     cout<<ans;
+
+
     return 0;
 }
