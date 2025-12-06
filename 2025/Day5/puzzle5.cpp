@@ -1,14 +1,8 @@
-#include<iostream>
-#include<fstream>
-#include<vector>
-#include<string>
-#include<algorithm>
-#include<chrono>
-#include<time.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main(){
-
+    auto start = chrono::high_resolution_clock::now();
     ifstream inputFile("input.txt");
 
     vector<string> input;
@@ -88,6 +82,9 @@ int main(){
     }
 
     cout<<ans<<endl;
-    cout<<ans1;
+    cout<<ans1<<endl;
+    auto end=chrono::high_resolution_clock::now();
+    chrono::duration<double> duration = end-start;
+    cout<<1000*duration.count();
     return 0;
 }
